@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+
+select {
+  
+  appearance: none;
+ border-radius: 5%;
+ background-color:#27ae60;
+ color: #fff;
+  border: 1px;
+  margin-top: 35px;
+  margin-right: 20px;
+  height: 50px;
+  width: 10%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  text-align: center;
+  font-weight:bold;
+  cursor: pointer;
+  
+  outline: none;
+}
+.submit1{
+  
+  
+ border-radius: 5%;
+ 
+  margin-top: 35px;
+  margin-left: 100px;
+  height: 50px;
+  width: 10%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 20px;
+  
+  text-align: center;
+  border: 4px solid #226fbe;
+  color: #fff;
+  background: #226fbe;
+  cursor: pointer;
+}
+
+
+h2{
+  text-align: center;
+}
+
+h5 {
+  
+font-size: 25px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color: rebeccapurple;
+margin-right: 20px;
+}
+
+  </style>
+  </head>
+<body>
+  <form   name="myForm" onsubmit="return validateForm()" method="post"style="align-items: center;" >
+    <div class = "select" style="display:flex; margin-left: 25%;">
+   
+    <h5>Search details of ports from</h5>
+  
+    <select id="mySelect" name ="select1">
+      <option value="NOOSL">Oslo</option>
+      <option value="CNSGH">Shanghai</option>
+      <option value="CNSTG">Shantou</option>
+      <option value="NLRTM">Rotterdam </option>
+      <option value="DEHAM">Hamburg </option>
+      <option value="GBFXT">Felixstowe </option>
+      <option value="USNYC"> New York</option>
+      
+  
+    </select>
+    <h5>to</h5>
+    <select id="mySelect1"  name ="select2">
+      <option value="NOOSL">Oslo</option>
+      <option value="CNSGH">Shanghai</option>
+      <option value="CNSTG">Shantou</option>
+      <option value="NLRTM">Rotterdam </option>
+      <option value="DEHAM">Hamburg </option>
+      <option value="GBFXT">Felixstowe </option>
+      <option value="USNYC"> New York</option>
+      
+  
+    </select>
+  
+
+  <input class="submit1" type="submit" value="submit">
+</div>
+</form>
+<h2>{{x}}</h2>
+
+<script>
+
+function validateForm() {
+  let x = document.forms["myForm"]["mySelect"].value;
+  let y =document.forms["myForm"]["mySelect1"].value;
+  if (x == y) {
+    alert("both name can't be same ");
+    return false;
+  }
+  else{
+
+  }
+  
+}
+
+</script>
+
+</body>
+</html>
